@@ -200,7 +200,7 @@ if __name__ == "__main__":
     datanum = datanow[-1]
     timenow = df['time_stop'].tolist()
     timenum = timenow[-1]  
-    tzloc = pytz.timezone('Europe/Tallinn')
+    tzloc = pytz.timezone('Europe/Warsaw')
     timeinurl = timestamp - int(timeadd)
     timesave = 0
     for i in segments:
