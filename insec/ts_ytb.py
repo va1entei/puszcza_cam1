@@ -82,8 +82,9 @@ def detect_motion(file_name):
         text = "Unoccupied"
         if frame is None:
             break       
-        (wa, ha,c) =  frame.shape              
+        #(wa, ha,c) =  frame.shape              
         frame = imutils.resize(frame, width=500)
+        (ha, wa,c) =  frame.shape       
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         gray = cv2.GaussianBlur(gray, (21, 21), 0)
         if firstFrame is None:
