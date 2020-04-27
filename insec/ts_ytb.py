@@ -103,6 +103,10 @@ def detect_motion(file_name):
             if cv2.contourArea(c) > siz1rectloc:
                 siz1rectloc = cv2.contourArea(c)
                 (x1,y1,w1,h1) = cv2.boundingRect(c)
+                if wa/w1 < 5:
+                    w1=w1/5
+                if ha/h1 < 5:
+                    h1=h1/5
                 transparent_area1 = (0,0,wa,y1)
                 transparent_area2 = (0, y1 + h1,wa,ha)
                 transparent_area3 = (0,y1, x1,y1 + h1)
