@@ -204,9 +204,9 @@ if __name__ == "__main__":
     bb = []
     print("csv")
     now1 = datetime.datetime.now()
-    if os.path.exists("Readme.md"):
+    if os.path.exists("README.md"):
         if not os.path.exists(now1.strftime('%Y%m%d')+".md"):
-            os.rename("Readme.md", now1.strftime('%Y%m%d')+".md")    
+            os.rename("README.md", now1.strftime('%Y%m%d')+".md")    
     fieldnames = ['data', 'time_start','time_stop','count_move','caps_num','size_rect','count_rect','screen']
     file_csv='insec/names.csv'
     if not os.path.exists(file_csv):
