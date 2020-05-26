@@ -203,6 +203,10 @@ if __name__ == "__main__":
     aa = []
     bb = []
     print("csv")
+    now1 = datetime.datetime.now()
+    if os.path.exists("Readme.md"):
+        if not os.path.exists(now1.strftime('%Y%m%d')+".md"):
+            os.rename("Readme.md", now1.strftime('%Y%m%d')+".md")    
     fieldnames = ['data', 'time_start','time_stop','count_move','caps_num','size_rect','count_rect','screen']
     file_csv='insec/names.csv'
     if not os.path.exists(file_csv):
@@ -263,7 +267,7 @@ if __name__ == "__main__":
             os.system("git config --global user.email "+logi_name+"@github.com")
             os.system("git remote set-url origin https://"+logi_name+":"+pass_name+"@github.com/"+logi_name+"/"+retpo_name+".git")
             os.system("git checkout master")
-            os.system("git add  insec "+path_to_in+" README.md")
+            os.system("git add  insec "+path_to_in+" *.md")
             os.system("git commit -m \"oinion csv files\"")
             os.system("git push origin master   ") 	
             
