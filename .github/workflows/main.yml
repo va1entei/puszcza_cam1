@@ -26,4 +26,4 @@ jobs:
            sudo pip3 install imutils
            sudo pip3 install streamlink
            sudo pip3 install Pillow
-           sudo python3 insec/ts_ytb.py /opt/ in/ https://m.youtube.com/watch?feature=youtu.be&v=TrFs32d-7bA
+           sudo python3 insec/ts_ytb.py /opt/ in/ https://m.youtube.com/watch?v=TrFs32d-7bA
